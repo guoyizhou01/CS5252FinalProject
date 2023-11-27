@@ -8,12 +8,12 @@ All grammar should be stored in .gmma files. In .gmma files, use %A, %B, etc., t
 
 ## Context-Free Grammar Example
 
-'''
+```
 
 %S
 
 %S->0%S0|1%S1|0|1
 
-'''
+```
 
 ## Push-Down Automata Representation
