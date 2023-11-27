@@ -4,7 +4,7 @@
 
 # Context-Free Grammar Representation
 
-All grammar should be stored in .gmma files. In .gmma files, use \$A, \$B, etc., to represent variables. If necessary, you can use forms like \${A0} to represent variable A0. Anything not begin with symbol \$ is considered as a character.
+All grammar should be stored in .gmma files. In .gmma files, use %A, %B, etc., to represent variables. If necessary, %{A0}, %{A1}, etc., might be used to represent variables A0, A1. Anything not starting with symbol % is considered character by default.
 
 # Context-Free Grammar Example
 
