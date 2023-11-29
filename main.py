@@ -53,15 +53,22 @@ def read_cfg(filename):
 	return (start,grammar)
 
 def is_state(string):
-	if string[0] == "%":
-		return True
-	return False
+	return string[0] == "%"
 
 def cfg_to_pda(start,grammar):
 	index = dict()
-	print("δ(q0,ε,ε)=δ(q[{0:}],{0:})".format(start))
+	print("δ(q0,ε,ε)=δ(q_{0:}_0,{0:})".format(start))
 	for key in grammar.keys():
 		index[key] = 0
+	for key in grammar.keys():
+		production = grammar[key]
+		for i in range(len(production)):
+			if is_state(production[i]):
+				print("δ(q_{0:}_{1:},ε,ε)=δ(q_{2:}_0,{0:}_{1})".format(key,index[key],production[i]) )
+			elif :
+				print("δ(q_{0:}_{1:},ε,ε)=δ(q_{2:}_0,{0:}_{1})".format(key,index[key],production[i]) )
+
+
 
 if __name__ == '__main__':
 	filename = sys.argv[1].strip()
