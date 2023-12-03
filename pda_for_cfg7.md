@@ -1,3 +1,4 @@
+```
 Start state: q_START
 δ(q_START,ε,ε)=δ(q_%S_0,{ACCEPT})
 δ(q_%S_0,0,ε)=δ(q_%S_1,ε)
@@ -15,3 +16,4 @@ Start state: q_START
 δ(q_%S_4,1,{ACCEPT})=δ(q_END,ε)
 δ(q_%S_5,ε,{ACCEPT})=δ(q_END,ε)
 Accept by empty stack only
+```
