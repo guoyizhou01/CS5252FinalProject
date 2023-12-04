@@ -10,12 +10,17 @@ def read_cfg(filename):
 	with open(filename, mode ='r') as file:
 		first_line = True
 		for line in file:
+			if line.find('//') != -1:
+				line = line[0:line.find('//')]
+			line = line.strip().replace(" ","").replace("~","ε")
+			if len(line) == 0:
+				continue
 			if first_line:
-				start = line.strip().replace(" ","").replace("~","ε")
+				start = line
 				first_line = False
 				continue
 			# split_line[0] is state, split_line[1] is all possible productions	
-			split_line = line.strip().replace(" ","").replace("~","ε").split("->")
+			split_line = line.split("->")
 			productions = split_line[1].split("|")
 			for production in productions:
 				single_prod = []
