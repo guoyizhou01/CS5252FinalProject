@@ -1,4 +1,4 @@
-# CS5252 Final Project
+# CS5252 Final Project - CFG to PDA converter / Equivlane of CFG and PDA
 
 ## Overview
 
